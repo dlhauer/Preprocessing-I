@@ -143,6 +143,11 @@ nav {
   margin-bottom: 2rem;
   margin-right: 1.5rem;
 }
+@media (max-width: 500px) {
+  nav {
+    justify-content: space-between;
+  }
+}
 nav a {
   margin-left: 2.5rem;
   font-size: 1.6rem;
@@ -158,12 +163,24 @@ header {
   border: 3px solid salmon;
   border-radius: 20px;
 }
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 header img {
   padding: 1.5rem;
 }
 header img,
 header .title {
   width: 48%;
+}
+@media (max-width: 500px) {
+  header img,
+  header .title {
+    width: 100%;
+  }
 }
 header .title {
   display: flex;
@@ -210,8 +227,20 @@ header .contact-button a {
   justify-content: space-around;
   margin-bottom: 2.5rem;
 }
+@media (max-width: 500px) {
+  .middle-content {
+    flex-direction: column;
+  }
+}
 .middle-content section {
   width: 48%;
+}
+@media (max-width: 500px) {
+  .middle-content section {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
 }
 .middle-content h2 {
   font-size: 2.5rem;
@@ -220,20 +249,31 @@ header .contact-button a {
 .middle-content .skills {
   padding: 0 5rem;
 }
+@media (max-width: 500px) {
+  .middle-content .skills {
+    padding: 0;
+  }
+}
 .middle-content .skills ul {
   border: 1px solid lightgray;
   border-radius: 10px;
 }
 .middle-content .skills ul li {
   padding: 1rem;
+}
+.middle-content .skills ul li:not(:last-child) {
   border-bottom: 1px solid lightgray;
 }
 .work-history h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
+.work-history .table-container {
+  overflow-x: auto;
+}
 .work-history table {
   width: 100%;
+  min-width: 700px;
   font-size: 1.6rem;
   margin-bottom: 10rem;
 }

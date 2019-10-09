@@ -76,10 +76,6 @@ table {
 	font-size: 2rem;
 }
 
-// .button-hover() {
-
-// }
-
 html, body {
 		height: 100%;
 		padding: 1rem 1.5rem;
@@ -95,7 +91,7 @@ nav {
 	margin-right: 1.5rem;
 
 	@media (max-width: 500px) {
-			
+		justify-content: space-between;	
 	}
 
 	a {
@@ -111,6 +107,11 @@ header {
 	width: 100%;
 	flex-wrap: wrap;
 	margin-bottom: 2.5rem;
+
+	@media (max-width: 500px) {
+		flex-direction: column;	
+		align-items: center;
+	}
 	.highlight-box();
 
 	img {
@@ -118,20 +119,19 @@ header {
 	}
 	img, .title {
 		width: 48%;
-
+		@media (max-width: 500px) {
+			width: 100%;
+		}
 	}
 
 	.title {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		// flex-wrap: wrap;
 		flex-direction: column;
 
 		h1, h3 {
 			width: 100%;
-			// height: 10%;
-			// border: 1px solid red;
 			padding-left: 2rem;
 			padding-bottom: .7rem;
 		}
@@ -149,7 +149,6 @@ header {
 	p {
 		font-size: @text-font-size;
 		padding: 1rem 2rem;
-		// border: 1px solid red;
 		width: 100%;
 		margin-bottom: 1.5rem;
 	} 
@@ -167,9 +166,17 @@ header {
 	font-size: @text-font-size;
 	justify-content: space-around;
 	margin-bottom: 2.5rem;
+	@media (max-width: 500px) {
+		flex-direction: column;	
+	}
 
 	section {
-		width: 48%
+		width: 48%;
+		@media (max-width: 500px) {
+			width: 100%; 
+			padding: 0;
+			margin-bottom: 3rem;
+		}
 	}
 
 	h2 {
@@ -180,7 +187,9 @@ header {
 
 	.skills {
 		padding: 0 5rem;
-		// width: 40%;
+		@media (max-width: 500px) {
+			padding: 0;
+		}
 
 		ul {
 			border: 1px solid lightgray;
@@ -188,8 +197,11 @@ header {
 
 			li {
 				padding: 1rem;
+			} 
+
+			li:not(:last-child) {
 				border-bottom: 1px solid lightgray;
-			} //This closes li
+			}
 		} // This closes ul
 	} //This closes .skills
 } //This closes .middle-content
@@ -200,10 +212,17 @@ header {
 		margin-bottom: 1.5rem;
 	}
 
+	.table-container {
+		overflow-x: auto;
+	}
+
 	table {
 		width: 100%;
+		min-width: 700px;
 		font-size: @text-font-size;
 		margin-bottom: 10rem;
+
+		
 		tr {
 			text-align: left;
 
