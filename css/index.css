@@ -133,5 +133,20 @@ table {
 html,
 body {
   height: 100%;
-  background: red;
+  padding: 3% 5%;
+  font-size: 62.5%;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+nav a {
+  margin-left: 1.5rem;
+  font-size: 1.6rem;
+}
+header {
+  display: flex;
+}
+header img {
+  width: 400px;
 }
