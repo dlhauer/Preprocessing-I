@@ -105,7 +105,7 @@ section {
   display: block;
 }
 body {
-  line-height: 1;
+  line-height: 1.5;
 }
 ol,
 ul {
@@ -133,20 +133,127 @@ table {
 html,
 body {
   height: 100%;
-  padding: 3% 5%;
+  padding: 1rem 1.5rem;
   font-size: 62.5%;
+  font-family: 'Montserrat', 'Arial', sans-serif;
 }
 nav {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 2rem;
+  margin-right: 1.5rem;
 }
 nav a {
-  margin-left: 1.5rem;
+  margin-left: 2.5rem;
   font-size: 1.6rem;
+  text-decoration: none;
+  color: gray;
 }
 header {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  background-color: whitesmoke;
+  border: 3px solid salmon;
+  border-radius: 20px;
 }
 header img {
-  width: 400px;
+  padding: 1.5rem;
+}
+header img,
+header .title {
+  width: 48%;
+}
+header .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .title h1,
+header .title h3 {
+  width: 100%;
+  padding-left: 2rem;
+  padding-bottom: 0.7rem;
+}
+header .title h1 {
+  font-size: 3rem;
+}
+header .title h3 {
+  font-size: 1.7rem;
+  font-style: italic;
+  padding-left: 4rem;
+}
+header p {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+header .contact-button {
+  margin: 1rem 0 3rem 2rem;
+}
+header .contact-button a {
+  padding: 1rem 2rem;
+  color: white;
+  background-color: skyblue;
+  border: 0.3rem solid gray;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.middle-content {
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: space-around;
+  margin-bottom: 2.5rem;
+}
+.middle-content section {
+  width: 48%;
+}
+.middle-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.middle-content .skills {
+  padding: 0 5rem;
+}
+.middle-content .skills ul {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+.middle-content .skills ul li {
+  padding: 1rem;
+  border-bottom: 1px solid lightgray;
+}
+.work-history h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.work-history table {
+  width: 100%;
+  font-size: 1.6rem;
+  margin-bottom: 10rem;
+}
+.work-history table tr {
+  text-align: left;
+}
+.work-history table tr th {
+  font-weight: bold;
+}
+.work-history table tr th,
+.work-history table tr td {
+  padding: 1rem 0;
+  border-bottom: 1px solid gainsboro;
+}
+.work-history table tr:nth-child(odd) {
+  background-color: whitesmoke;
+}
+footer {
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: gray;
 }

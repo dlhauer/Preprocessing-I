@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -54,27 +54,178 @@ table {
 }
 
 @text-font-size: 1.6rem;
+@large-heading-font-size: 3rem;
+@small-heading-font-size: 2.5rem;
+@link-color: gray;
+@main-font: 'Montserrat', 'Arial', sans-serif;
+
+.highlight-box() {
+	background-color: whitesmoke;
+	border: 3px solid salmon;
+	border-radius: 20px;
+}
+
+.button-link() {
+	padding: 1rem 2rem;
+	color: white;
+	background-color: skyblue;
+	border: .3rem solid gray;
+	border-radius: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+// .button-hover() {
+
+// }
 
 html, body {
 		height: 100%;
-		padding: 3% 5%;
+		padding: 1rem 1.5rem;
 		font-size: 62.5%;
+		font-family: @main-font;
 }
+
 
 nav {
 	display: flex;
 	justify-content: flex-end;
+	margin-bottom: 2rem;
+	margin-right: 1.5rem;
+
+	@media (max-width: 500px) {
+			
+	}
 
 	a {
-		margin-left: 1.5rem;
+		margin-left: 2.5rem;
 		font-size: @text-font-size;
+		text-decoration: none;
+		color: @link-color;
 	}
-}
+} //This closes the nav
+
 header {
 	display: flex;
-
+	width: 100%;
+	flex-wrap: wrap;
+	margin-bottom: 2.5rem;
+	.highlight-box();
 
 	img {
-		width: 400px;
+		padding: 1.5rem;
 	}
+	img, .title {
+		width: 48%;
+
+	}
+
+	.title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// flex-wrap: wrap;
+		flex-direction: column;
+
+		h1, h3 {
+			width: 100%;
+			// height: 10%;
+			// border: 1px solid red;
+			padding-left: 2rem;
+			padding-bottom: .7rem;
+		}
+
+		h1 {
+			font-size: @large-heading-font-size;
+		}
+		h3 {
+			font-size: 1.7rem;
+			font-style: italic;
+			padding-left: 4rem;
+		}
+	}//This closes .title
+
+	p {
+		font-size: @text-font-size;
+		padding: 1rem 2rem;
+		// border: 1px solid red;
+		width: 100%;
+		margin-bottom: 1.5rem;
+	} 
+
+	.contact-button {
+		margin: 1rem 0 3rem 2rem;
+		a {
+			.button-link;
+		}
+	} //This closes .contact-button
+} //This closes the header
+
+.middle-content {
+	display: flex;
+	font-size: @text-font-size;
+	justify-content: space-around;
+	margin-bottom: 2.5rem;
+
+	section {
+		width: 48%
+	}
+
+	h2 {
+		font-size: @small-heading-font-size;
+		margin-bottom: 1.5rem;
+	}
+
+
+	.skills {
+		padding: 0 5rem;
+		// width: 40%;
+
+		ul {
+			border: 1px solid lightgray;
+			border-radius: 10px;
+
+			li {
+				padding: 1rem;
+				border-bottom: 1px solid lightgray;
+			} //This closes li
+		} // This closes ul
+	} //This closes .skills
+} //This closes .middle-content
+
+.work-history {
+	h2 {
+		font-size: @small-heading-font-size;
+		margin-bottom: 1.5rem;
+	}
+
+	table {
+		width: 100%;
+		font-size: @text-font-size;
+		margin-bottom: 10rem;
+		tr {
+			text-align: left;
+
+			th {
+				font-weight: bold;
+			}
+
+			th, td {
+				padding: 1rem 0;
+				border-bottom: 1px solid gainsboro;
+			}	
+		} //This closes tr
+
+		tr:nth-child(odd) {
+			background-color: whitesmoke
+		}
+	} // This closes table
+} // This closes .work-history
+
+footer {
+	font-size: @text-font-size;
+	margin-bottom: 5rem;
+	text-align: center;
+	color: gray;
 }
