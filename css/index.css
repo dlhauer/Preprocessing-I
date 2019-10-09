@@ -275,7 +275,7 @@ header .contact-button a {
   width: 100%;
   min-width: 700px;
   font-size: 1.6rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 .work-history table tr {
   text-align: left;
@@ -290,6 +290,10 @@ header .contact-button a {
 }
 .work-history table tr:nth-child(odd) {
   background-color: whitesmoke;
+}
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
 footer {
   font-size: 1.6rem;
